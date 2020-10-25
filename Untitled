@@ -1,0 +1,38 @@
+B1-8.	Total data ~260 karena yang dites hanya ~260 data (data tes = 3/10 dari ~891)
+
+TM1
+1.	
+GNB	:	Akurasi		: 0.81
+		Precision	: 0.80 (macro avg)
+		Recall		: 0.79 (macro avg)
+		F-1 Score	: 0.80 (macro avg)
+		ROC-AUC		: 0.79
+
+LDA	:	Akurasi		: 0.84
+		Precision	: 0.82 (macro avg)
+		Recall		: 0.82 (macro avg)
+		F-1 Score	: 0.82 (macro avg)
+		ROC-AUC		: 0.82
+
+2.
+Pada data yang diujikan, secara garis besar model LDA lebih baik daripada model GNB karena memiliki nilai yang lebih tinggi (akurasi, presisi, recall dan f-1). Selain itu grafik ROC-AUC dari model LDA lebih condong ke kiri atas daripada model GNB yang berarti model LDA memiliki probabilitas yang lebih tinggi daripada model GNB.
+
+TM2
+1.
+GNB	:	Akurasi		: 0.80
+		Precision	: 0.79
+		Recall		: 0.79
+		F-1 Score	: 0.79
+
+LDA	:	Akurasi		: 0.80
+		Precision	: 0.79
+		Recall		: 0.78
+		F-1 Score	: 0.79
+
+B2-6.	Karena pada cross-validation terjadi iterasi (perulangan) dari hasil confusion matrix. Hasil dari masing-masing perulangan akan dirata-rata sehingga hasil inilah yang muncul pada akurasi, presisi, recall dan f-1 score.
+
+2.
+Kedua model (GNB dan LDA) pada saat ditrain dengan dataset yang displit dengan cross-validation, menghasilkan nilai (akurasi, presisi, recall dan f-1 score) yang hampir sama persis. Hal ini mungkin disebabkan oleh dataset (data train dan data tes) pada kedua model sama-sama bersifat representatif (salah satu class tidak berkumpul pada data train/data tes).
+
+3.
+Evaluasi model GNB yang menggunakan hold-out dan cross-validation memiliki nilai hasil (akurasi, presisi, recall dan f-1 schore) yang tidak berbeda jauh. Namun hasil evaluasi model LDA yang menggunakan hold-out dan cross-validation memiliki nilai hasil yang terbilang cukup jauh dimana selisih dari masing-masing nilai sebanyak ~0.04.
